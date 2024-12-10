@@ -46,7 +46,7 @@ export function Settings({ teamData }: { teamData: TeamDataWithMembers }) {
                       : 'No active subscription'}
                 </p>
               </div>
-              <form action={customerPortalAction}>
+              <form action={null}>
                 <Button type="submit" variant="outline">
                   Manage Subscription
                 </Button>

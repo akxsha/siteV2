@@ -2,7 +2,7 @@ import Stripe from 'stripe';
 import { redirect } from 'next/navigation';
 import { Team } from '@/lib/db/schema';
 import {
-  getTeamByStripeCustomerId,
+  // getTeamByStripeCustomerId,
   getUser,
   updateTeamSubscription,
 } from '@/lib/db/queries';

@@ -7,12 +7,9 @@ export function Terminal() {
   const [terminalStep, setTerminalStep] = useState(0);
   const [copied, setCopied] = useState(false);
   const terminalSteps = [
-    'use client',
+    'import { use } from convoy-kit;',
+    'import convoy from convoy-SDK;',
     ' ',
-    'import { use } from convoy-kit',
-    'import {} from convoy-SDK',
-    ' ',
-    'const app = convoy();',
   ];
 
   useEffect(() => {
@@ -65,7 +62,7 @@ export function Terminal() {
           {terminalSteps.map((step, index) => (
             <div
               key={index}
-              className={`flex items-center ${
+              className= {`flex items-center ${
                 index > terminalStep ? 'opacity-0' : 'opacity-100'
               } transition-opacity duration-300`}
             >

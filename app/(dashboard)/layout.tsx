@@ -14,6 +14,9 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { useUser } from '@/lib/auth';
 import { signOut } from '@/app/(login)/actions';
 import { useRouter } from 'next/navigation';
+import NextImage from 'next/image';  // Changed the import name
+import logoSrc from '@/app/concordance-logo.svg';
+
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,9 +31,15 @@ function Header() {
 
   return (
     <header className="border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center">
-          <CircleIcon className="h-6 w-6 text-orange-500" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">        
+            <Link href="/" className="flex items-center">
+            <NextImage
+              src={logoSrc}
+              alt="logo"
+              className="w-[50px] md:w-[50px] lg:w-[50px] xl:w-[45px] h-auto"
+              width={50}
+              height={50}
+            />  
           <span className="ml-2 text-xl font-semibold text-gray-900">Concordance</span>
         </Link>
         <div className="flex items-center space-x-4">

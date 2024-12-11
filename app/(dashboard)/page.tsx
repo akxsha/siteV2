@@ -11,7 +11,7 @@ export default function HomePage() {
             <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-7 lg:text-left">
               <h1 className="text-4xl font-bold text-gray-900 tracking-tight sm:text-5xl md:text-6xl">
               Seamless Integration.
-                <span className="block text-orange-500">Unlimited Potential.</span>
+                <span className="block text-yellow-500">Unlimited Potential.</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
               Concordance enables developers to integrate blockchain into any use case in hours—not months. </p>
@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
             <div>
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md  bg-gray-50 text-yellow-500">
                 <svg viewBox="0 0 24 24" className="h-6 w-6">
                   <path
                     fill="currentColor"
@@ -57,7 +57,7 @@ export default function HomePage() {
             </div>
 
             <div className="mt-10 lg:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-gray-50 text-yellow-500">
                 <Database className="h-6 w-6" />
               </div>
               <div className="mt-5">
@@ -71,7 +71,7 @@ export default function HomePage() {
             </div>
 
             <div className="mt-10 lg:mt-0">
-              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-gray-50 text-yellow-500">
                 <CreditCard className="h-6 w-6" />
               </div>
               <div className="mt-5">
@@ -95,14 +95,12 @@ export default function HomePage() {
                 Unlock New Capabilities
               </h2>
               <p className="mt-3 max-w-3xl text-lg text-gray-500">
-                Our template provides everything you need to get your SaaS up
-                and running quickly. Don't waste time on boilerplate - focus on
-                what makes your product unique.
+              Move beyond crypto payments—unlock identity management, instant data validation, on-chain data indexing, and more. The future is now.
               </p>
             </div>
             <div className="mt-8 lg:mt-0 flex justify-center lg:justify-end">
               <a
-                href="https://github.com/leerob/next-saas-starter"
+                href="https://concordance-labs.gitbook.io/concordance-labs"
                 target="_blank"
               >
                 <Button className="bg-white hover:bg-gray-100 text-black border border-gray-200 rounded-full text-xl px-12 py-6 inline-flex items-center justify-center">

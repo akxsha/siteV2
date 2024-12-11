@@ -7,12 +7,12 @@ export function Terminal() {
   const [terminalStep, setTerminalStep] = useState(0);
   const [copied, setCopied] = useState(false);
   const terminalSteps = [
-    'git clone https://github.com/leerob/next-saas-starter',
-    'pnpm install',
-    'pnpm db:setup',
-    'pnpm db:migrate',
-    'pnpm db:seed',
-    'pnpm dev 🎉',
+    'use client',
+    ' ',
+    'import { use } from convoy-kit',
+    'import {} from convoy-SDK',
+    ' ',
+    'const app = convoy();',
   ];
 
   useEffect(() => {
@@ -33,13 +33,20 @@ export function Terminal() {
 
   return (
     <div className="w-full rounded-lg shadow-lg overflow-hidden bg-gray-900 text-white font-mono text-sm relative">
-      <div className="p-4">
-        <div className="flex justify-between items-center mb-4">
-          <div className="flex space-x-2">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+      {/* Tab bar */}
+      <div className="flex items-center bg-gray-800 text-gray-400 px-4 py-2">
+        {/* Tabs */}
+        <div className="flex space-x-4">
+          {/* Active Tab */}
+          <div className="text-white bg-gray-700 px-4 py-1 rounded-t-md">
+            index.js
           </div>
+          {/* Other Tabs */}
+          <div className="px-4 py-1">package.json</div>
+          <div className="px-4 py-1">index.css</div>
+        </div>
+        {/* Copy button */}
+        {/* <div className="ml-auto">
           <button
             onClick={copyToClipboard}
             className="text-gray-400 hover:text-white transition-colors"
@@ -51,14 +58,21 @@ export function Terminal() {
               <Copy className="h-5 w-5" />
             )}
           </button>
-        </div>
-        <div className="space-y-2">
+        </div> */}
+      </div>
+      <div className="p-4">
+        <div className="space-y-1">
           {terminalSteps.map((step, index) => (
             <div
               key={index}
-              className={`${index > terminalStep ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+              className={`flex items-center ${
+                index > terminalStep ? 'opacity-0' : 'opacity-100'
+              } transition-opacity duration-300`}
             >
-              <span className="text-green-400">$</span> {step}
+              {/* Line number */}
+              <div className="w-8 text-gray-500 text-right pr-2">{index + 1}</div>
+              {/* Terminal step */}
+              <div className="leading-6">{step}</div>
             </div>
           ))}
         </div>

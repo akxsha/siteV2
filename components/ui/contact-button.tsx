@@ -11,9 +11,6 @@ import {
 import { toast } from '@/app//hooks/use-toast'
 import { email } from '@/app/content/email'
 
-import arrowRight from '@images/pixel-arrow-right.svg'
-
-console.log(arrowRight)
 
 export function ContactButton() {
   const copyEmail = () => {
@@ -35,7 +32,7 @@ export function ContactButton() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align='center'>
         <DropdownMenuItem onClick={copyEmail}>Copy Email</DropdownMenuItem>
-        <CalDotComMeeting>Virtual Meeting</CalDotComMeeting>
+        {/* <CalDotComMeeting>Virtual Meeting</CalDotComMeeting> */}
       </DropdownMenuContent>
     </DropdownMenu>
   )

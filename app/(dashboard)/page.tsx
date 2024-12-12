@@ -2,6 +2,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, CreditCard, Database } from 'lucide-react';
 import { Terminal } from './terminal';
 
+import { ContactButton } from '@/components/ui/contact-button'
+
 export default function HomePage() {
   return (
     <main>

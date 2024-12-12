@@ -7,8 +7,8 @@ export function Terminal() {
   const [terminalStep, setTerminalStep] = useState(0);
   const [copied, setCopied] = useState(false);
   const terminalSteps = [
-    'import { use } from convoy-kit;',
-    'import convoy from convoy-SDK;',
+    'import { use } from convoy-kit',
+    'import convoy from convoy-SDK',
     ' ',
   ];
 
@@ -58,7 +58,7 @@ export function Terminal() {
         </div> */}
       </div>
       <div className="p-4">
-        <div className="space-y-1">
+        <div className=" space-y-1">
           {terminalSteps.map((step, index) => (
             <div
               key={index}

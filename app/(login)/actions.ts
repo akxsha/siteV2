@@ -82,11 +82,11 @@ export const signIn = validatedAction(signInSchema, async (data, formData) => {
     logActivity(foundTeam?.id, foundUser.id, ActivityType.SIGN_IN),
   ]);
 
-  const redirectTo = formData.get('redirect') as string | null;
-  if (redirectTo === 'checkout') {
-    const priceId = formData.get('priceId') as string;
-    return createCheckoutSession({ team: foundTeam, priceId });
-  }
+  // const redirectTo = formData.get('redirect') as string | null;
+  // if (redirectTo === 'checkout') {
+  //   const priceId = formData.get('priceId') as string;
+  //   return createCheckoutSession({ team: foundTeam, priceId });
+  // }
 
   redirect('/dashboard');
 });

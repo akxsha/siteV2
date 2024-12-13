@@ -11,8 +11,8 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useUser } from '@/lib/auth';
-import { signOut } from '@/app/(login)/actions';
+// import { useUser } from '@/lib/auth';
+// import { signOut } from '@/app/(login)/actions';
 import { useRouter } from 'next/navigation';
 import NextImage from 'next/image';  // Changed the import name
 import logoSrc from '@/app/concordance-logo.svg';
@@ -20,14 +20,14 @@ import logoSrc from '@/app/concordance-logo.svg';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { user, setUser } = useUser();
+  // const { user, setUser } = useUser();
   const router = useRouter();
 
-  async function handleSignOut() {
-    setUser(null);
-    await signOut();
-    router.push('/');
-  }
+  // async function handleSignOut() {
+  //   setUser(null);
+  //   await signOut();
+  //   router.push('/');
+  // }
 
   return (
     <header className="border-b border-gray-200">
@@ -49,7 +49,7 @@ function Header() {
           >
             Pricing
           </Link> */}
-          {user ? (
+          {/* {user ? (
             <DropdownMenu open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <DropdownMenuTrigger asChild>
                 <Avatar className="cursor-pointer size-9">
@@ -86,7 +86,7 @@ function Header() {
             >
               <Link href="/sign-up">Sign Up</Link>
             </Button>
-          )}
+          )} */}
         </div>
       </div>
     </header>

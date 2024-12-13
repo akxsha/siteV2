@@ -7,9 +7,26 @@ export function Terminal() {
   const [terminalStep, setTerminalStep] = useState(0);
   const [copied, setCopied] = useState(false);
   const terminalSteps = [
-    'import { use } from convoy-kit',
-    'import convoy from convoy-SDK',
-    ' ',
+    <span>
+      <span style={{ color: '#c485bfff' }}>import </span>
+      <span style={{ color: '#ffd602ff' }}>{'{'}</span>
+      <span style={{ color: '#9cdcfeff' }}>{'use'}</span>
+      <span style={{ color: '#ffd602ff' }}>{'}'}</span>
+      <span style={{ color: '#c485bfff' }}> from </span>
+      <span style={{ color: '#ce9178ff' }}>'concordance-kit';</span>
+      <span style={{ color: 'white' }}>;</span>
+
+    </span>,
+    <span>
+      <span style={{ color: '#c485bfff' }}>import </span>
+      <span style={{ color: '#9cdcfeff' }}>convoy</span>
+      <span style={{ color: '#c485bfff' }}> from </span>
+      <span style={{ color: '#ce9178ff' }}>concordance-kit;</span>
+      <span style={{ color: 'white' }}>;</span>
+
+      </span>,
+
+       <span>  </span>
   ];
 
   useEffect(() => {
@@ -69,7 +86,7 @@ export function Terminal() {
               {/* Line number */}
               <div className="w-8 text-gray-500 text-right pr-2">{index + 1}</div>
               {/* Terminal step */}
-              <div className="leading-6">{step}</div>
+              <div className="leading-6" style={{ color: '#8c76c3' }}>{step}</div>
             </div>
           ))}
         </div>
